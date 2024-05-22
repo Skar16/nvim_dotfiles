@@ -33,6 +33,18 @@ local plugins= {
  "saadparwaiz1/cmp_luasnip",
   "rafamadriz/friendly-snippets",
  "github/copilot.vim",
+"folke/which-key.nvim",
+
+-- testing typst integration
+  'kaarmu/typst.vim',
+  ft = 'typst',
+  lazy=false,
+
+	-- typst preview
+'chomosuke/typst-preview.nvim',
+  lazy = false, -- or ft = 'typst'
+  version = '0.3.*',
+  build = function() require 'typst-preview'.update() end,
 
 }
 local opts = { }

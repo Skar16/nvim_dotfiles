@@ -1,1 +1,2 @@
 --init
+vim.g.mapleader = " "
