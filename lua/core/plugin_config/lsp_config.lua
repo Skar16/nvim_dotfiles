@@ -9,7 +9,7 @@ require('mason-lspconfig').setup(
 -- require("lspconfig").rust_analyzer.setup {}
 -- ...
 --ensure_installed= { 'lua_lsp' }
-ensure_installed= { 'typst_lsp', 'lua_ls' }
+ensure_installed= { 'typst_lsp', 'lua_ls', 'matlab_ls','pylsp' }
 
 --require("lspconfig").lua_ls.setup{}
 }
