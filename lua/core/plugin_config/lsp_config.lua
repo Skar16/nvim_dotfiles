@@ -9,7 +9,13 @@ require('mason-lspconfig').setup(
 -- require("lspconfig").rust_analyzer.setup {}
 -- ...
 --ensure_installed= { 'lua_lsp' }
+
 ensure_installed= { 'typst_lsp', 'lua_ls', 'matlab_ls','pylsp' }
+
+-- ensure_installed= { 'typst_lsp', 'lua_ls', 'grammarly' }
+--ensure_installed= { 'alex' } --markdown
+
+-- added grammarly_lsp for markdown support)
 
 --require("lspconfig").lua_ls.setup{}
 }
