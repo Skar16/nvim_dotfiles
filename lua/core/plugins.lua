@@ -21,7 +21,7 @@ local plugins= {
  "nvim-lualine/lualine.nvim",  -- nice status bar
  "nvim-tree/nvim-web-devicons", -- icons
  "nvim-tree/nvim-tree.lua", -- file managment
- "nvim-treesitter/nvim-treesitter",
+ "nvim-treesitter/nvim-treesitter", -- syntax highlighting
 
  { -- fuzzy find
     "nvim-telescope/telescope.nvim", tag = "0.1.4",
@@ -31,9 +31,11 @@ local plugins= {
  "hrsh7th/cmp-nvim-lsp", --auto complte
  "L3MON4D3/LuaSnip", -- Snippets
  "saadparwaiz1/cmp_luasnip",
-  "rafamadriz/friendly-snippets",
- "github/copilot.vim",
-"folke/which-key.nvim",
+  "rafamadriz/friendly-snippets", -- pre defined snippets REMOVE
+ "github/copilot.vim", --git
+"folke/which-key.nvim", -- keybindings help
+
+"terrortylor/nvim-comment",
 
 -- testing typst integration
   'kaarmu/typst.vim',
