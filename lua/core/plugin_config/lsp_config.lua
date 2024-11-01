@@ -10,7 +10,7 @@ require('mason-lspconfig').setup(
 -- ...
 --ensure_installed= { 'lua_lsp' }
 
-ensure_installed= { 'typst_lsp', 'lua_ls', 'matlab_ls','pylsp' }
+ensure_installed= { 'tinymist', 'lua_ls', 'matlab_ls','pylsp' }
 
 -- ensure_installed= { 'typst_lsp', 'lua_ls', 'grammarly' }
 --ensure_installed= { 'alex' } --markdown
