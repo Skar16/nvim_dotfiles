@@ -29,7 +29,7 @@ local plugins= {
   },
  "hrsh7th/nvim-cmp", -- auto complet
  "hrsh7th/cmp-nvim-lsp", --auto complte
- "L3MON4D3/LuaSnip", -- Snippets
+	{ "L3MON4D3/LuaSnip", config = function() require("core.plugin_config.snippets")end}, -- Snippets
  "saadparwaiz1/cmp_luasnip",
   "rafamadriz/friendly-snippets", -- pre defined snippets REMOVE
  "github/copilot.vim", --git
