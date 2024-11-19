@@ -30,8 +30,8 @@ return {
 						s = { "<leader>", "search files" },
 						r = { "<f>", "live grep" },
 					},
-					name = "Leader",
-					["<leader>"] = { ":Telescope find files (CR)", "Fuzzy find files" },
+					-- name = "Leader",
+					-- ["<leader>"] = { ":Telescope find files (CR)", "Fuzzy find files" },
 					-- g = {
 					-- 	name = "Git", -- Group name for Git commands
 					-- 	s = { ":Git status<CR>", "not implemented" },

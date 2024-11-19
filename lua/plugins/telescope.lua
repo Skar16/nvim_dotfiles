@@ -42,7 +42,7 @@ return {
 			-- Enable telescope fzf native, if installed
 			pcall(require("telescope").load_extension, "fzf")
 			vim.keymap.set("n", "<Space><Space>", builtin.find_files, { desc = "Telescope Find Files" })
-			vim.keymap.set("n", "<Space>f", builtin.live_grep, { desc = "Telescope Live Grep" }
+			vim.keymap.set("n", "<Space>f", builtin.live_grep, { desc = "Telescope Live Grep" })
 		end,
 	},
 }

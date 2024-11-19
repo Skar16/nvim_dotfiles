@@ -7,7 +7,6 @@ return {
 		config = function()
 			require("catppuccin").setup({
 				integrations = {
-					lualine = true, -- change
 					cmp = true,
 					fidget = true,
 					gitsigns = true,
