@@ -14,38 +14,39 @@ local M = {}
 -- Disable Space bar since it'll be used as the leader key
 nnoremap("<space>", "<nop>")
 
--- Window +  better kitty navigation
-nnoremap("<C-j>", function()
-  if vim.fn.exists(":NvimTmuxNavigateDown") ~= 0 then
-    vim.cmd.NvimTmuxNavigateDown()
-  else
-    vim.cmd.wincmd("j")
-  end
-end)
+-- -- Window +  better kitty navigation
+-- nnoremap("<C-j>", function()
+--   if vim.fn.exists(":NvimTmuxNavigateDown") ~= 0 then
+--     vim.cmd.NvimTmuxNavigateDown()
+--   else
+--     vim.cmd.wincmd("j")
+--   end
+-- end)
+--
+-- nnoremap("<C-k>", function()
+--   if vim.fn.exists(":NvimTmuxNavigateUp") ~= 0 then
+--     vim.cmd.NvimTmuxNavigateUp()
+--   else
+--     vim.cmd.wincmd("k")
+--   end
+-- end)
+--
+-- nnoremap("<C-l>", function()
+--   if vim.fn.exists(":NvimTmuxNavigateRight") ~= 0 then
+--     vim.cmd.NvimTmuxNavigateRight()
+--   else
+--     vim.cmd.wincmd("l")
+--   end
+-- end)
+--
+-- nnoremap("<C-h>", function()
+--   if vim.fn.exists(":NvimTmuxNavigateLeft") ~= 0 then
+--     vim.cmd.NvimTmuxNavigateLeft()
+--   else
+--     vim.cmd.wincmd("h")
+--   end
+-- end)
 
-nnoremap("<C-k>", function()
-  if vim.fn.exists(":NvimTmuxNavigateUp") ~= 0 then
-    vim.cmd.NvimTmuxNavigateUp()
-  else
-    vim.cmd.wincmd("k")
-  end
-end)
-
-nnoremap("<C-l>", function()
-  if vim.fn.exists(":NvimTmuxNavigateRight") ~= 0 then
-    vim.cmd.NvimTmuxNavigateRight()
-  else
-    vim.cmd.wincmd("l")
-  end
-end)
-
-nnoremap("<C-h>", function()
-  if vim.fn.exists(":NvimTmuxNavigateLeft") ~= 0 then
-    vim.cmd.NvimTmuxNavigateLeft()
-  else
-    vim.cmd.wincmd("h")
-  end
-end)
 
 -- Swap between last two buffers
 nnoremap("<leader>'", "<C-^>", { desc = "Switch to last buffer" })
@@ -333,14 +334,14 @@ end
 -- Symbol Outline keybind
 nnoremap("<leader>so", ":SymbolsOutline<cr>")
 
--- Open Copilot panel
-nnoremap("<leader>oc", function()
-  require("copilot.panel").open({})
-end, { desc = "[O]pen [C]opilot panel" })
+-- -- Open Copilot panel
+-- nnoremap("<leader>oc", function()
+--   require("copilot.panel").open({})
+-- end, { desc = "[O]pen [C]opilot panel" })
 
 -- nvim-ufo keybinds
--- nnoremap("zR", require("ufo").openAllFolds)
--- nnoremap("zM", require("ufo").closeAllFolds)
+nnoremap("zR", require("ufo").openAllFolds)
+nnoremap("zM", require("ufo").closeAllFolds)
 
 -- toggle inlay hints
 nnoremap("<leader>ih", function()
