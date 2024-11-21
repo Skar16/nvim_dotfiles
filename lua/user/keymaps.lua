@@ -241,35 +241,43 @@ nnoremap("<leader>5", function()
 end)
 
 -- Git keymaps --
-nnoremap("<leader>gb", ":Gitsigns toggle_current_line_blame<cr>")
-nnoremap("<leader>gf", function()
-  local cmd = {
-    "sort",
-    "-u",
-    "<(git diff --name-only --cached)",
-    "<(git diff --name-only)",
-    "<(git diff --name-only --diff-filter=U)",
-  }
+-- nnoremap("<leader>gb", ":Gitsigns toggle_current_line_blame<cr>")
+-- nnoremap("<leader>gf", function()
+--   local cmd = {
+--     "sort",
+--     "-u",
+--     "<(git diff --name-only --cached)",
+--     "<(git diff --name-only)",
+--     "<(git diff --name-only --diff-filter=U)",
+--   }
+--
+--   if not utils.is_git_directory() then
+--     vim.notify(
+--       "Current project is not a git directory",
+--       vim.log.levels.WARN,
+--       { title = "Telescope Git Files", git_command = cmd }
+--     )
+--   else
+--     require("telescope.builtin").git_files()
+--   end
+-- end, { desc = "Search [G]it [F]iles" })
 
-  if not utils.is_git_directory() then
-    vim.notify(
-      "Current project is not a git directory",
-      vim.log.levels.WARN,
-      { title = "Telescope Git Files", git_command = cmd }
-    )
-  else
-    require("telescope.builtin").git_files()
-  end
-end, { desc = "Search [G]it [F]iles" })
+-- lazy git keymaps --
+nnoremap("<leader>gg", ":LazyGit<CR>", { desc = "Open Lazygit" })                                           -- Open Lazygit interface
+nnoremap("<leader>gc", ":LazyGitCurrentFile<CR>", { desc = "Open Lazygit for Current File" })               -- Lazygit in current working directory
+nnoremap("<leader>gf", ":LazyGitFilter<CR>", { desc = "Open Lazygit Filter" })                              -- Lazygit in a floating terminal
+nnoremap("<leader>gfc", ":LazyGitFilterCurrentFile<CR>", { desc = "Open Lazygit Filter for Current File" }) -- Lazygit for commits affecting the current files
+
+
 
 -- Telescope keybinds --
 nnoremap("<leader>?", require("telescope.builtin").oldfiles, { desc = "[?] Find recently opened files" })
 nnoremap("<leader>sb", require("telescope.builtin").buffers, { desc = "[S]earch Open [B]uffers" })
-nnoremap("<leader>sf", function()
+nnoremap("<leader><leader>", function()
   require("telescope.builtin").find_files({ hidden = true })
 end, { desc = "[S]earch [F]iles" })
 nnoremap("<leader>sh", require("telescope.builtin").help_tags, { desc = "[S]earch [H]elp" })
-nnoremap("<leader>sg", require("telescope.builtin").live_grep, { desc = "[S]earch by [G]rep" })
+nnoremap("<leader>sl", require("telescope.builtin").live_grep, { desc = "[S]earch by [G]rep" })
 
 nnoremap("<leader>sc", function()
   require("telescope.builtin").commands(require("telescope.themes").get_dropdown({
