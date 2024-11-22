@@ -1,6 +1,4 @@
-
 --file managment
-
 
 return {
 	{
@@ -23,8 +21,7 @@ return {
 				},
 			})
 
-			vim.keymap.set('n', '<c-n>', ':NvimTreeFindFile<CR>')
+			-- vim.keymap.set('n', '<c-n>', ':NvimTreeFindFile<CR>')
 		end,
 	},
 }
-
